@@ -1,1 +1,5 @@
-this is the first Git file and change to commit
+
+
+--git status
+--git add
+--git commit
