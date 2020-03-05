@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class AjaxController extends Controller
 {
    public function post(Request $request){
-      $response = array(
+      $response = array( 
           'status' => 'success',
           'msg' => $request->message,
       );
