@@ -9,7 +9,7 @@
     @csrf
 @endif
 	
-<meta name="csrf-token" content="{{ csrf_token() }}" />
+<meta name="csrf-token" content="{{ csrf_token()}}" />
 <div class="card shadow mb-4">
         <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Medical Bill Application</h6>
