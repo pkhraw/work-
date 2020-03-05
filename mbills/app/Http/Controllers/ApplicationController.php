@@ -74,7 +74,7 @@ class ApplicationController extends Controller
 	public function fn_addApplication(){
 
 		$flag= $_POST['saveupdflag'];
-		print_r($_POST);exit;
+		
 		$application=new Application_master;
 		$finyr=Self::getcurrfinyear();
 		$appnoInstance1=new Appno;

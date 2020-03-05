@@ -1,20 +1,22 @@
 $(document).ready(function () {
   $('#dp1').datepicker({
-      format: 'dd-mm-yyyy'
+      format: 'dd-mm-yyyy' 
    });
 });
 
  
  function updateApplication(){
+
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
   
   $.ajax({
-                    type: 'POST',
-                    data: {_token: CSRF_TOKEN, message:"Hello"},
-                    dataType: 'JSON',
-                    success: function (data) { 
-                        alert(data.msg); 
-                    }
+           	url:'/postajax',
+            type: 'POST',
+            data: {_token: CSRF_TOKEN, message:"Hello"},
+            dataType: 'JSON',
+            success: function (data) { 
+                alert(data.msg); 
+            }
         }); 
  }
 
