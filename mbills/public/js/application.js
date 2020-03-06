@@ -13,11 +13,13 @@ $(document).ready(function () {
   var empname=document.frm_application.txtempname.value;
   var txtltr=document.frm_application.txtltr.value;
   var ltrdte=document.frm_application.ltrDate.value;
+  var appid=document.frm_application.Happid.value;
+  var finyr=document.frm_application.Hfinyr.value;
   $.ajax({
            	url:'/postajax',
             type: 'POST',
             data: {_token: CSRF_TOKEN, medType: medType, trea_code: trea_code,
-             empname: empname, txtltr: txtltr, ltrdte: ltrdte
+             empname: empname, txtltr: txtltr, ltrdte: ltrdte, appid: appid, finyr: finyr 
              },
             dataType: 'JSON',
             success: function (data) { 
