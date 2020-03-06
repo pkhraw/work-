@@ -9,7 +9,7 @@ class AjaxController extends Controller
    public function post(Request $request){
       $response = array( 
           'status' => 'success',
-          'msg' => $request->message,
+          'msg' => $request->ltrdte,
       );
       return response()->json($response); 
    }

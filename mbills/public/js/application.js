@@ -8,11 +8,17 @@ $(document).ready(function () {
  function updateApplication(){
 
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-  
+  var medType=document.frm_application.medtype.value;
+  var trea_code=document.frm_application.seltrea.value;
+  var empname=document.frm_application.txtempname.value;
+  var txtltr=document.frm_application.txtltr.value;
+  var ltrdte=document.frm_application.ltrDate.value;
   $.ajax({
            	url:'/postajax',
             type: 'POST',
-            data: {_token: CSRF_TOKEN, message:"Hello"},
+            data: {_token: CSRF_TOKEN, medType: medType, trea_code: trea_code,
+             empname: empname, txtltr: txtltr, ltrdte: ltrdte
+             },
             dataType: 'JSON',
             success: function (data) { 
                 alert(data.msg); 
